@@ -1,0 +1,23 @@
+<div class="flex justify-center mt-[10rem] flex-col items-center ml-[7.2rem] mr-[7.2rem] mb-[10rem]">
+    <div #imgOverlayContainer class=" w-full h-full absolute hidden z-50 justify-center">
+        <img #imgOverlay class="h-[80%] mt-[.5rem] z-50" src="../../../assets/img/1.png" alt="">
+        <div class="bg-black w-full h-full absolute flex  opacity-80 justify-center">
+
+        </div>
+        
+    </div>
+    <h2 class="text-[4.8rem] tracking-[.08em] text-[#22254C]">Galería</h2>
+    <div #galeryContainer class="h-[58rem] overflow-hidden transition-height duration-300 ease-in-out mt-[5rem]">
+        <div class="flex gap-[1.35rem] ">
+            <div class="absolute bg-[#FFFFFF] mt-[26.4rem] right-[7.2rem] rounded-[1.6rem] pl-[.8rem] pr-[.8rem] cursor-pointer z-40" (click)="showGalery()">
+                <p class="font-['Libre_Franklin'] text-[3.2rem] font-bold text-[#282C7F]">Ver Galeria <span #more class="">+</span></p>
+            </div>
+            <div #leftSide class="flex flex-col gap-y-[1rem] w-[50%]  rounded-[2.4rem]">
+
+            </div>
+            <div #rightSide class="w-[50%] flex flex-col gap-y-[1.35rem] rounded-[2.4rem]">
+                
+            </div>
+        </div>
+    </div>
+</div>
