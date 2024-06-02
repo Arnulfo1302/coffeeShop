@@ -10,6 +10,7 @@ import { MenuItemComponent } from './componets/menu-item/menu-item.component';
 import { ImgOverlayComponent } from './componets/img-overlay/img-overlay.component';
 import { CommunicationServiceService } from './services/communication-service.service';
 import { Subscription } from 'rxjs';
+import { BarMenuOverlayComponent } from './componets/bar-menu-overlay/bar-menu-overlay.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -23,23 +24,39 @@ import { Subscription } from 'rxjs';
     MenuComponent,
     MenuItemComponent,
     ImgOverlayComponent,
+    BarMenuOverlayComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  @ViewChild('barOverlay', { static: true }) barOverlay!: ElementRef;
   private subscription: Subscription;
+  private subscriptionBar: Subscription;
   constructor(private renderer: Renderer2, private communicationService: CommunicationServiceService) {
     this.subscription = this.communicationService.snapScroll$.subscribe(() => {
       this.setScroll();
+    });
+    this.subscriptionBar = this.communicationService.barOverlay$.subscribe((params) => {
+      this.barMenu(params.n);
     });
   }
   title = 'coffeeShop';
   @ViewChild('scrollSnap', { static: true }) scrollSnap!: ElementRef;
 
   setScroll() {
-    console.log("app");
     this.renderer.addClass(document.body, 'overflow-hidden');
+  }
+  barMenu(n: number){
+    if(n === 1){
+      this.renderer.removeClass(this.barOverlay.nativeElement, 'hidden');
+      this.renderer.addClass(this.barOverlay.nativeElement, 'flex');
+      this.setScroll();
+    }else if(n===0) {
+      this.renderer.removeClass(this.barOverlay.nativeElement, 'flex');
+      this.renderer.addClass(this.barOverlay.nativeElement, 'hidden');
+      this.renderer.removeClass(document.body, 'overflow-hidden');
+    }
   }
   
 }

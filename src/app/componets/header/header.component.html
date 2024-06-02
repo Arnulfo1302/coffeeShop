@@ -1,27 +1,56 @@
-<div class="flex items-center w-[77%] justify-between mt-[3.9rem] ml-[10.2rem]">
-<div class="">
-  <div class="inline-block">
-    <div class="flex items-center  gap-[.5rem]">
-      <p class="text-[3.2rem] font-bold text-['kaisei-opti'] text-[#282C7F] m-0">La Tacita</p>
-      <div class="flex">
-        <div class="w-[2.4rem] h-[2.4rem] rounded-[50%] bg-[#282C7F]"></div>
-        <div
-          class="w-[2.4rem] h-[2.4rem] rounded-[50%] bg-transparent border-[0.1rem] border-[#282C7F] ml-[-1.2rem]"
-        ></div>
+<div
+  class=" flex max-[440px]:mt-[2.2rem] items-center justify-center mt-[3.9rem] gap-[12rem] w-full max-[1005px]:gap-[6rem] max-[769px]:gap-[2rem] max-[440px]:gap-[4rem]"
+>
+  <div class="min-[440px]:hidden cursor-pointer" (click)="openBarMenu(1)">
+    <img src="../../../assets/img/icons/sandwichBar.svg" alt="" />
+  </div>
+  <div class="" routerLink="/home">
+    <div class="inline-block ">
+      <div class="flex items-center gap-[.5rem]">
+        <p
+          class="text-[3.2rem] font-bold text-['kaisei-opti'] text-[#282C7F] m-0 max-[769px]:text-[2.6rem]"
+        >
+          La Tacita
+        </p>
+        <div class="flex">
+          <div class="w-[2.4rem] h-[2.4rem] rounded-[50%] bg-[#282C7F]"></div>
+          <div
+            class="w-[2.4rem] h-[2.4rem] rounded-[50%] bg-transparent border-[0.1rem] border-[#282C7F] ml-[-1.2rem]"
+          ></div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-[-.8rem]">
+        <p
+          class="text-[1.4rem] font-normal text-['kaisei-opti'] text-[#000000] m-0"
+        >
+          Café y Panadería
+        </p>
       </div>
     </div>
-    <div class="flex justify-center mt-[-.8rem]">
-        <p class="text-[1.4rem] font-normal text-['kaisei-opti'] text-[#000000] m-0">Café y Panadería</p>
-    </div>
   </div>
-</div>
-<div class="flex items-center gap-[.7rem]">
-  <a target="_blank" href="https://twitter.com/">
-    <img class="w-[4rem] h-[4rem] " src="../../../assets/img/icons/x.svg" alt="">
-  </a>
-  <a target="_blank" href="https://www.instagram.com/">
-    <img class="w-[4rem] h-[4rem]" src="../../../assets/img/icons/instagram.svg" alt="">
-  </a>
+  <div
+    class="flex max-[1220px]:gap-[4rem] max-[1100px]:gap-[1rem] gap-[8rem] text-[#22254C] text-[2.4rem] font-[500] justify-center max-[769px]:text-[2rem] max-[440px]:hidden"
+  >
+  <p class="cursor-pointer">Galería</p>
+  <p class="cursor-pointer">Nuestro Espacio</p>
+  <p class="cursor-pointer">Ubicación</p>
+  <p class="cursor-pointer">Menú</p>
+  </div>
+  <div class="flex items-center gap-[.7rem] max-[769px]:gap-[.9rem]">
+    <a target="_blank" href="https://twitter.com/">
+      <img
+        class="w-[4rem] h-[4rem] max-[440px]:w-[2.56rem] max-[440px]:h-[2.56rem]"
+        src="../../../assets/img/icons/x.svg"
+        alt=""
+      />
+    </a>
+    <a target="_blank" href="https://www.instagram.com/">
+      <img
+        class="w-[4rem] h-[4rem] max-[440px]:w-[2.56rem] max-[440px]:h-[2.56rem]"
+        src="../../../assets/img/icons/instagram.svg"
+        alt=""
+      />
+    </a>
+  </div>
   
-</div>
 </div>

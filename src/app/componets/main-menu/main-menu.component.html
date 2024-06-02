@@ -1,0 +1,176 @@
+<app-header></app-header>
+<div class="flex justify-center w-full max-[1023px]:mb-[4rem]">
+    <div class="w-[70%] max-[768px]:w-[90%] justify-center flex flex-col items-center mb-[1rem] align-middle">
+        <div class="justify-center flex w-full mt-[7rem]">
+            <h2 class="text-[8rem] text-[#282C7F]">Menú</h2>
+        </div>
+        <div class="border-b-[.05rem] border-black w-full"></div>
+        <div #menuContainer class="bg-white w-full text-[3.6rem] mt-[2.5rem] font-medium max-[1024px]:sticky max-[1024px]:top-0 overflow-x-auto whitespace-nowrap max-w-full">
+            <div class="flex justify-around w-[100rem] min-[1025px]:w-full">
+              <p id="btnEntradas" #btnEntradas class="cursor-pointer" (click)="scrollToSection('entradas')">Entradas</p>
+              <p id="btnBebidas" #btnBebidas class="cursor-pointer" (click)="scrollToSection('bebidasCafe')">Bebidas con Café</p>
+              <p id="btnPanaderia" #btnPanaderia class="cursor-pointer" (click)="scrollToSection('panaderia')">Panadería</p>
+              <p id="btnSandwiches" #btnSandwiches class="cursor-pointer" (click)="scrollToSection('sandwiches')">Sándwiches</p>
+            </div>
+          </div>
+        <div class="flex gap-[3rem] mt-[2.5rem] w-[95%]"> <!--Segmento-->
+            <div class="w-[33%] h-full max-[768px]:hidden">
+                <img class="object-cover h-full" src="../../../assets/img/fondoMenu.jpeg" alt=""> <!--Imagen-->
+            </div>
+            <div class="min-[1000px]:w-[67%] flex flex-col">
+                <div #sectionEntradas id="entradas" class="flex flex-col w-full justify-center items-center section"> <!--Seccion-->
+                    <p  class="bg-[#22254C] text-[3.4rem] justify-center flex p-[.5rem] text-white w-full font-bold">Entradas</p>
+                    <div class="flex flex-col w-[95%] ">
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Pandebonitos</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">8 exquisitos pandebonos con arequipe o dulce de guayaba.</p>
+                                <p class="text-[2.4rem]">$9.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Mini tapas de Patacón</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">12 pataconcitos con carne desmechada y ahogado.</p>
+                                <p class="text-[2.4rem]">$12.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Deditos de Queso</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">4 deditos llenos queso. Sí, de mucho queso</p>
+                                <p class="text-[2.4rem]">$14.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div #sectionBebidasCafe id="bebidasCafe" class="flex flex-col w-full justify-center items-center mt-[1.5rem] section"> <!--Seccion-->
+                    <p  class="bg-[#22254C] text-[3.4rem] justify-center flex p-[.5rem] text-white w-full font-bold">Bebidas con Café</p>
+                    <div class="flex flex-col w-[95%] ">
+                        <p class="w-[11.8rem] h-[5.5rem] bg-white mt-[2rem] flex justify-center items-center text-[3.2rem] font-bold">Frío</p>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Cold Brew con Sandía</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Deliciosa bebida de café intenso con un suave sabor a sandía refrescante.</p>
+                                <p class="text-[2.4rem]">$14.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Frappé de Café</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Refrescante café espumoso, acompañado de crema chantilly.</p>
+                                <p class="text-[2.4rem]">$12.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Ice Latte</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Rico café concentrado con leche espumada. (Leche vegetal o animal).</p>
+                                <p class="text-[2.4rem]">$10.000</p>
+                            </div>
+                        </div>
+                        <p class="w-[21.8rem] h-[5.5rem] bg-white mt-[2rem] flex justify-center items-center text-[3.2rem] font-bold">Caliente</p>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Cappuccino</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Exquisita mezcla entre espresso, leche vaporizada y cremosa espuma.</p>
+                                <p class="text-[2.4rem]">$7.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Macchiato Caramelo</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Dulce combinación de espresso, lecha vaporizada y jarabe de caramelo.</p>
+                                <p class="text-[2.4rem]">$9.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Irlandés</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Potente combinación de espresso con la intensidad del whisky.</p>
+                                <p class="text-[2.4rem]">$12.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[25rem] mt-[2rem] max-[440px]:h-full">
+                    <img class="object-cover w-full h-full" src="../../../assets/img/6b92397d2794551d4c5658bf2a950118.jpeg" alt="">
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-[3rem] mt-[2.5rem] w-[95%]"> <!--Segmento-->
+            <div class="min-[1000px]:w-[67%] flex flex-col">
+                <div #sectionPanaderia id="panaderia" class="flex flex-col w-full justify-center items-center section"> <!--Seccion-->
+                    <p  class="bg-[#22254C] text-[3.4rem] justify-center flex p-[.5rem] text-white w-full font-bold">Panadería</p>
+                    <div class="flex flex-col w-[95%] ">
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Croissant de chocolate</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Cachito de pan crugiente con una mezcla de chocolate.</p>
+                                <p class="text-[2.4rem]">$8.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Rollo de canela</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Riquísimo pan enrollado con un poderoso sabor a canela.</p>
+                                <p class="text-[2.4rem]">$5.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Panzerotto</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Pastelito crocante y relleno de salsa de tomate y queso mozzarella.</p>
+                                <p class="text-[2.4rem]">$10.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Canasta de almojábanas</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">6 almohabas con mermelada de guayaba a tu gusto.</p>
+                                <p class="text-[2.4rem]">$7.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div #sectionSandwiches id="sandwiches" class="flex flex-col w-full justify-center items-center mt-[1.5rem] section"> <!--Seccion-->
+                    <p class="bg-[#22254C] text-[3.4rem] justify-center flex p-[.5rem] text-white w-full font-bold">Sándwiches</p>
+                    <div class="flex flex-col w-[95%] ">
+                        <p class="text-[2.2rem] mt-[2rem]">Todos nuestros sándwiches son preparados con pan de masa madre y vienen acompañados de papas rústicas.</p>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Tocineta</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Rúgula, mix de quesos, cebolla roja, tomates secos y tocineta bañada en salsa de la casa.</p>
+                                <p class="text-[2.4rem]">$24.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Pollo</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Rúgula, queso mozzarella, tomates secos, pepinillos, salsa y pollo desmechado.</p>
+                                <p class="text-[2.4rem]">$24.000</p>
+                            </div>
+                        </div>
+                        <div class="w-full mt-[1.5rem] max-[440px]:gap-y-[1rem]"> <!--Item-->
+                            <p class="text-[2.8rem] font-bold">Cerdo</p>
+                            <div class="flex justify-between w-full max-[440px]:flex-col max-[440px]:gap-y-[1rem]">
+                                <p class="text-[2.2rem] min-[440px]:max-w-[60%]">Rúgula, queso doble crema, cebolla roja, 180g de carne de cerdo asada y salsa de ajo.</p>
+                                <p class="text-[2.4rem]">$28.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div class="w-[33%] h-full max-[768px]:hidden">
+                <img class="object-cover h-full" src="../../../assets/img/fondoMenu.jpeg" alt=""> <!--Imagen-->
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

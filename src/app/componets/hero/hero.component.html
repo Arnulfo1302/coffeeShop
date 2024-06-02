@@ -1,29 +1,30 @@
-<div class="flex justify-center mt-[6.7rem] flex-col items-center">
-  <div class="w-[110.1rem] justify-center text-center">
-    <h1 class="font-[50rem] text-[4.8rem] text-[#282C7F] tracking-[.1em]">
+<div class="flex justify-center max-[440px]:mt-[4rem] mt-[6.7rem] flex-col items-center">
+  <div class=" justify-center text-center flex">
+    <h1 class="max-[440px]:text-[1.7rem] font-[50rem] text-[4.8rem] text-[#282C7F] tracking-[.1em] w-[70%] max-[1025px]:w-[85%] max-[768px]:text-[3.5rem] ">
       Un espacio de café mágico para compartir experiencias
     </h1>
   </div>
-  <div class="mt-[1.8rem]">
-    <img class="w-[22rem]" src="../../../assets/img/taza.png" alt="" />
+  <div class="mt-[1.8rem] max-[440px]:mt-[.5rem]">
+    <img class="w-[22rem] max-[440px]:w-[9.6rem]" src="../../../assets/img/taza.png" alt="" />
   </div>
-  <div class="mt-[2rem]">
-    <p class="text-[#282C7F] text-[2.4rem] font-bold">Cali, Valle del Cauca</p>
+  <div class="mt-[2rem] max-[440px]:mt-[.5rem]">
+    <p class="text-[#282C7F] max-[440px]:text-[1.2rem] text-[2.4rem] font-bold">Cali, Valle del Cauca</p>
   </div>
-  <div class="mt-[2.2rem]">
+  <div class="mt-[2.2rem] max-[440px]:mt-[.5rem]">
     <button
-      class="bg-[#282C7F] rounded-[1.6rem] text-[3.2rem] pl-[1.6rem] pr-[1.6rem] pb-[.2rem] font-bold text-white flex justify-center items-center"
+      class="max-[440px]:w-[33.5rem] bg-[#282C7F] rounded-[1.6rem] text-[3.2rem] pl-[1.6rem] pr-[1.6rem] pb-[.2rem] font-bold text-white flex justify-center items-center"
       (click)="scrollToSection('#menuSeccion')">
-      <p class="m-0">Conoce nuestro menú</p>
+      <p class="m-0 max-[440px]:text-[1.6rem]">Conoce nuestro menú</p>
     </button>
   </div>
-  <div class="mt-[1rem]">
+  <div class="max-[440px]:mt-[.7rem] mt-[1rem]">
     <div
-      class="flex w-[4rem] h-[4rem] bg-[#282C7F] rounded-[50%] justify-center items-center cursor-pointer"
+      class="max-[440px]:w-[2rem] max-[440px]:h-[2rem] flex w-[4rem] h-[4rem] bg-[#282C7F] rounded-[50%] justify-center items-center cursor-pointer"
       (click)="scrollToSection('#menuSeccion')">
       <div>
-        <img src="../../../assets/img/icons/flecha.svg" alt="" />
-        <img src="../../../assets/img/icons/flecha.svg" alt="" />
+        <img class="max-[440px]:hidden" src="../../../assets/img/icons/flecha.svg" alt="" />
+        <img class="max-[440px]:hidden" src="../../../assets/img/icons/flecha.svg" alt="" />
+        <img class="min-[440px]:hidden" src="../../../assets/img/icons/mobileArrow.svg" alt="">
       </div>
     </div>
   </div>
