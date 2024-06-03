@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CommunicationServiceService } from '../../services/communication-service.service';
+import { AfterViewInit } from '@angular/core';
 
 interface Element {
   id: number;
