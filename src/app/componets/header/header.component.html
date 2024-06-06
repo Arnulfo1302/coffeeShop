@@ -1,10 +1,10 @@
 <div
-  class=" flex max-[440px]:mt-[2.2rem] items-center justify-center mt-[3.9rem] gap-[12rem] w-full max-[1005px]:gap-[6rem] max-[769px]:gap-[2rem] max-[440px]:gap-[4rem]"
+  class=" max-[1024px]:gap-[8rem] max-[1024px]:gap-[4rem] min-[1440px]:gap-[12rem]  flex max-[440px]:mt-[2.2rem] items-center justify-center mt-[3.9rem]w-full"
 >
   <div class="min-[440px]:hidden cursor-pointer" (click)="openBarMenu(1)">
     <img src="../../../assets/img/icons/sandwichBar.svg" alt="" />
   </div>
-  <div class="" routerLink="/home">
+  <div class="cursor-pointer" routerLink="/home">
     <div class="inline-block ">
       <div class="flex items-center gap-[.5rem]">
         <p
@@ -29,12 +29,12 @@
     </div>
   </div>
   <div
-    class="flex max-[1220px]:gap-[4rem] max-[1100px]:gap-[1rem] gap-[8rem] text-[#22254C] text-[2.4rem] font-[500] justify-center max-[769px]:text-[2rem] max-[440px]:hidden"
+    class=" max-[1024px]:gap-[1rem] flex gap-[8rem] text-[#22254C] text-[2.4rem] font-[500] justify-center max-[769px]:text-[2rem] max-[440px]:hidden"
   >
-  <p class="cursor-pointer">Galería</p>
-  <p class="cursor-pointer">Nuestro Espacio</p>
-  <p class="cursor-pointer">Ubicación</p>
-  <p class="cursor-pointer">Menú</p>
+  <p (click)="scrollTo('galeria')" class="cursor-pointer">Galería</p>
+  <p (click)="scrollTo('bullet')" class="cursor-pointer">Nuestro Espacio</p>
+  <p (click)="scrollTo('lugar')" class="cursor-pointer">Ubicación</p>
+  <p (click)="scrollTo('menu')" class="cursor-pointer">Menú</p>
   </div>
   <div class="flex items-center gap-[.7rem] max-[769px]:gap-[.9rem]">
     <a target="_blank" href="https://twitter.com/">

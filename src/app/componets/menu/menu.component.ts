@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../../app.component';
 import { MenuItemComponent } from '../menu-item/menu-item.component';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MenuItemComponent, NgFor],
+  imports: [MenuItemComponent, NgFor, RouterLink],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })

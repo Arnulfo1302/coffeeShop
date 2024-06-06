@@ -13,4 +13,11 @@ export class BarMenuOverlayComponent {
   cerrarBarOverlay(n: number){
     this.communicationService.barMenu(n);
   }
+  scrollTo(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      this.cerrarBarOverlay(0);
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
