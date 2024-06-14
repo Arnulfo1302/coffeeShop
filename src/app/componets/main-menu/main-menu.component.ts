@@ -31,6 +31,7 @@ export class MainMenuComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.setupIntersectionObserver(); 
+    window.scrollTo(0, 0);
   }
 
   setupIntersectionObserver() {
