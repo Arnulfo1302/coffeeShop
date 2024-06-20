@@ -46,12 +46,46 @@ export class GaleryComponent implements OnInit {
       this.selectedSection = 0;
     });
   }
+  ngAfterViewInit() {
+    this.setupIntersectionObserver();
+  }
+  setupIntersectionObserver() {
+    const sections = document.querySelectorAll('.section');
+    console.log('Sections found:', sections); // Verificar los elementos encontrados
+    const observerOptions = {
+      root: null,
+      rootMargin: '0% -30% 0% -30%',
+      threshold: 0.1
+    };
+  
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        const targetElement = entry.target as HTMLElement;
+        const childElement = targetElement.querySelector('div');
+        if (entry.isIntersecting) {
+          console.log('Entrando:', targetElement);
+          if (childElement) {
+            
+            this.renderer.removeClass(childElement, 'bg-white');
+          }
+        } else {
+          if (childElement) {
+            this.renderer.addClass(childElement, 'bg-white');
+          }
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  }
+  
   imgClick(id: number){
     this.imgData(id);
   }
   shouldApplyClass(index: number): any {
-    console.log('should apli index: '+index)
-    console.log('should selected: '+this.selectedSection)
     if (index === this.selectedSection) {
       return {
         'border-[#555555]': true,

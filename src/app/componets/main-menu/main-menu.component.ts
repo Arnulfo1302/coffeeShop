@@ -39,17 +39,16 @@ export class MainMenuComponent implements AfterViewInit {
     const observerOptions = {
       root: null,
       rootMargin: '-0% 0% -0% 0%',
-      threshold: .7
+      threshold: .72
     };
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         const targetElement = entry.target as HTMLElement;
         if (entry.isIntersecting) {
           this.addUnderline(targetElement);
-          console.log("entra");
         }else{
           this.removeUnderline(targetElement);
-          console.log('sale');
+
         }
       });
     };
@@ -78,22 +77,22 @@ export class MainMenuComponent implements AfterViewInit {
       case 'entradas':
           this.renderer.addClass(this.btnEntradas.nativeElement, 'underline');
           this.renderer.addClass(this.btnEntradas.nativeElement, 'decoration-[#22254C]');
-          this.scrollLeft(element.id);
+          this.scrollLeft('entradas');
         break;
       case 'bebidasCafe':
           this.renderer.addClass(this.btnBebidas.nativeElement, 'underline');
           this.renderer.addClass(this.btnBebidas.nativeElement, 'decoration-[#22254C]');
-          this.scrollLeft(element.id);
+          this.scrollLeft('bebidasCafe');
         break;
       case 'sandwiches':
           this.renderer.addClass(this.btnSandwiches.nativeElement, 'underline');
           this.renderer.addClass(this.btnSandwiches.nativeElement, 'decoration-[#22254C]');
-          this.scrollLeft(element.id);
+          this.scrollLeft('sandwiches');
         break;
         case 'panaderia':
             this.renderer.addClass(this.btnPanaderia.nativeElement, 'underline');
             this.renderer.addClass(this.btnPanaderia.nativeElement, 'decoration-[#22254C]');
-            this.scrollLeft(element.id);
+            this.scrollLeft('panaderia');
         break;
     }
   }

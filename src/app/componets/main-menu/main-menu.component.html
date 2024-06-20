@@ -5,12 +5,12 @@
             <h2 class="text-[8rem] text-[#282C7F]">Menú</h2>
         </div>
         <div class="border-b-[.05rem] border-black w-full"></div>
-        <div #menuContainer class="bg-white w-full text-[3.6rem] mt-[2.5rem] font-medium max-[1024px]:sticky max-[1024px]:top-0 overflow-x-auto whitespace-nowrap max-w-full">
-            <div class="flex justify-around w-[100rem] min-[1025px]:w-full">
-              <p id="btnEntradas" #btnEntradas class="cursor-pointer" (click)="scrollToSection('entradas')">Entradas</p>
-              <p id="btnBebidas" #btnBebidas class="cursor-pointer" (click)="scrollToSection('bebidasCafe')">Bebidas con Café</p>
-              <p id="btnPanaderia" #btnPanaderia class="cursor-pointer" (click)="scrollToSection('panaderia')">Panadería</p>
-              <p id="btnSandwiches" #btnSandwiches class="cursor-pointer" (click)="scrollToSection('sandwiches')">Sándwiches</p>
+        <div #menuContainer class="max-[768px]:sticky max-[768px]:top-0 bg-white w-full text-[3.6rem] mt-[2.5rem] font-medium overflow-x-auto whitespace-nowrap max-w-full h-full">
+            <div class="h-[5.4rem] flex justify-around w-[100rem] min-[1025px]:w-full">
+              <p id="btnEntradas" #btnEntradas class="cursor-pointer pl-[1rem] pr-[1rem]" (click)="scrollToSection('entradas')">Entradas</p>
+              <p id="btnBebidas" #btnBebidas class="cursor-pointer pl-[1rem] pr-[1rem]" (click)="scrollToSection('bebidasCafe')">Bebidas con Café</p>
+              <p id="btnPanaderia" #btnPanaderia class="cursor-pointer pl-[1rem] pr-[1rem]" (click)="scrollToSection('panaderia')">Panadería</p>
+              <p id="btnSandwiches" #btnSandwiches class="cursor-pointer pl-[1rem] pr-[1rem]" (click)="scrollToSection('sandwiches')">Sándwiches</p>
             </div>
           </div>
         <div class="flex gap-[3rem] mt-[2.5rem] w-[95%]"> <!--Segmento-->
@@ -100,7 +100,7 @@
             </div>
             
         </div>
-        <div class="w-[95%] h-[25rem] mt-[2rem] max-[440px]:h-full">
+        <div id="bebidasCafe" class="w-[95%] h-[25rem] mt-[2rem] max-[440px]:h-full section">
             <img class="object-cover w-full h-full" src="../../../assets/img/6b92397d2794551d4c5658bf2a950118.jpeg" alt="">
         </div>
         <div class="flex gap-[3rem] mt-[2.5rem] w-[95%]"> <!--Segmento-->
@@ -174,5 +174,11 @@
             </div>
         </div>
     </div>
+</div>
+<div class="overflow-hidden absolute right-0 top-[89rem] w-[96.8rem] h-[96.8rem] max-[1440px]:w-[85rem] max-[1440px]:h-[85rem] max-[1439px]:hidden">
+    <img class="absolute rotate-[-18.5deg] right-[-38rem] w-full h-full" src="../../../assets/img/planta.png" alt="">
+</div>
+<div class="overflow-hidden absolute left-0 top-[200rem] w-[96.8rem] h-[96.8rem] max-[1440px]:w-[85rem] max-[1440px]:h-[85rem] max-[1439px]:hidden max-[1440px]:top-[230rem]">
+    <img class="absolute rotate-[18.5deg] scale-x-[-1] left-[-38rem] w-full h-full" src="../../../assets/img/planta.png" alt="">
 </div>
 <app-footer></app-footer>
