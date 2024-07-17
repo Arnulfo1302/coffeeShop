@@ -51,7 +51,7 @@ export class GaleryComponent implements OnInit {
   }
   setupIntersectionObserver() {
     const sections = document.querySelectorAll('.section');
-    console.log('Sections found:', sections); // Verificar los elementos encontrados
+    console.log('Sections found:', sections);
     const observerOptions = {
       root: null,
       rootMargin: '0% -30% 0% -30%',
@@ -62,15 +62,23 @@ export class GaleryComponent implements OnInit {
       entries.forEach(entry => {
         const targetElement = entry.target as HTMLElement;
         const childElement = targetElement.querySelector('div');
+        const childElementImg = targetElement.querySelector('img');
         if (entry.isIntersecting) {
           console.log('Entrando:', targetElement);
           if (childElement) {
-            
             this.renderer.removeClass(childElement, 'bg-white');
+            this.renderer.removeClass(targetElement, 'max-[768px]:w-[16.1rem]');
+            this.renderer.removeClass(targetElement, 'max-[768px]:h-[19.9rem]');
+            this.renderer.addClass(targetElement, 'max-[768px]:w-[17.7rem]');
+            this.renderer.addClass(targetElement, 'max-[768px]:h-[21.8rem]');
           }
         } else {
           if (childElement) {
             this.renderer.addClass(childElement, 'bg-white');
+            this.renderer.removeClass(targetElement, 'max-[768px]:w-[17.7rem]');
+            this.renderer.removeClass(targetElement, 'max-[768px]:h-[21.8rem]');
+            this.renderer.addClass(targetElement, 'max-[768px]:w-[16.1rem]');
+            this.renderer.addClass(targetElement, 'max-[768px]:h-[19.9rem]');
           }
         }
       });

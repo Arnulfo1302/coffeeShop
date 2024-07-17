@@ -8,13 +8,14 @@
       <p class="text-[2.4rem] text-[#22254C] tracking-[.08em]">{{ description }}</p>
     </div>
     <div class="flex justify-center items-end w-full h-[30%]">
-      <button class="flex items-end bg-[#282C7F] rounded-[1.6rem] text-[2.4rem] text-white tracking-[.06em] pl-[1rem] pr-[1rem] pt-[.3rem] pb-[.3rem] font-bold font-['Libre_Franklin']" routerLink="/menu">
+      <button (click)="handleButtonClick($event, '/menu')" class="transition-all duration-500 ease-in-out flex items-end bg-[#282C7F] rounded-[1.6rem] text-[2.4rem] text-white tracking-[.06em] pl-[1rem] pr-[1rem] pt-[.3rem] pb-[.3rem] font-bold font-['Libre_Franklin']">
         Ver Menú
       </button>
     </div>
   </div>
 </div>
-<div class="max-[1024px]:h-[15rem] max-[768px]:h-[8rem] w-full min-[1025px]:hidden rounded-[1rem] relative cursor-pointer" routerLink="/menu">
-  <img class="w-full h-full rounded-[1rem] object-cover" src="{{ url }}" alt="{{ title }}">
+<div class=" overflow-hidden max-[1024px]:h-[15rem] max-[768px]:h-[8rem] w-full min-[1025px]:hidden rounded-[1rem] relative cursor-pointer" (click)="navigateWithDelay('/menu', url)">
+  <img class="transition-all duration-500 ease-in-out imgButton w-full h-full rounded-[1rem] object-cover" [src]="url" [alt]="title">
   <p class="absolute inset-0 flex items-center justify-center text-white text-[2rem] font-bold bg-black bg-opacity-50 rounded-[.8rem] max-[440px]:text-[2rem] max-[768px]:text-[3rem] max-[1024px]:text-[4rem]">{{ title }}</p>
 </div>
+

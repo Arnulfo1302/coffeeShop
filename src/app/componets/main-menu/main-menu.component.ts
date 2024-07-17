@@ -25,6 +25,7 @@ export class MainMenuComponent implements AfterViewInit {
   @ViewChild('sectionSandwiches', { static: true }) sectionSandwiches!: ElementRef;
   @ViewChild('menuContainer', { static: true }) menuContainer!: ElementRef;
   isLessPx: boolean = false;
+  porcentaje: number = .60;
   constructor(private renderer: Renderer2) {
     this.checkScreenWidthAndExecute();
   }
@@ -39,7 +40,7 @@ export class MainMenuComponent implements AfterViewInit {
     const observerOptions = {
       root: null,
       rootMargin: '-0% 0% -0% 0%',
-      threshold: .72
+      threshold: this.porcentaje
     };
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
@@ -48,7 +49,6 @@ export class MainMenuComponent implements AfterViewInit {
           this.addUnderline(targetElement);
         }else{
           this.removeUnderline(targetElement);
-
         }
       });
     };
@@ -70,6 +70,7 @@ export class MainMenuComponent implements AfterViewInit {
     if (window.innerWidth < 1025) {
       this.isLessPx = true;
       console.log(this.isLessPx);
+      this.porcentaje = .4;
     }
   }
   addUnderline(element: HTMLElement){

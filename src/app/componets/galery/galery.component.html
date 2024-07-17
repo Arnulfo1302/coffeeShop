@@ -1,8 +1,8 @@
-<div class="w-full justify-center flex mt-[8rem] ">
-  <h2 class="text-[3.4rem] font-bold text-[#22254C]">Galería</h2>
+<div class="w-full justify-center flex mt-[8rem]">
+  <h2 class="text-[3.4rem] max-[768px]:text-[2.2rem] font-bold text-[#22254C]">Galería</h2>
 </div>
 <div
-  class="snap-mandatory snap-x max-[768px]:overflow-scroll w-full h-[74.3rem] flex items-center justify-center max-[768px]:h-[35rem] max-[1024px]:h-[50rem] max-[1440px]:h-[65rem] max-[768px]:justify-start"
+  class="snap-mandatory snap-x max-[768px]:overflow-scroll w-full h-[74.3rem] flex items-center justify-center max-[768px]:h-[30rem] max-[1024px]:h-[50rem] max-[1440px]:h-[65rem] max-[768px]:justify-start"
 >
   <div
     class=" max-[768px]:hidden max-[768px]:ml-[50rem] flex gap-[3rem] max-[1440px]:gap-[2rem] max-[1024px]:gap-[1rem] max-[768px]:gap-[1.5rem] items-center justify-center"
@@ -60,12 +60,12 @@
     </div>
   </div>
   <div
-    class="snap-mandatory snap-x ml-[1rem] mr-[3rem] min-[769px]:hidden flex max-[768px]:gap-[.8rem]"
+    class="snap-mandatory snap-x ml-[1rem] mr-[3rem] min-[769px]:hidden flex max-[768px]:gap-[.8rem] items-center"
   >
     <div
       *ngFor="let item of this.elementsGaleries"
       (click)="imgClick(item.id - 1)"
-      class="relative snap-center max-[768px]:w-[17.7rem] max-[768px]:h-[21.8rem] ease-in-out duration-200 max-[1024px]:w-[26rem] max-[1024px]:h-[36rem] max-[1440px]:w-[35.3rem] max-[1440px]:h-[46.5rem] w-[47.3rem] h-[58.5rem] rounded-[2.4rem] section"
+      class="transition-all relative snap-center max-[768px]:w-[17.7rem] max-[768px]:h-[21.8rem] ease-in-out duration-200 max-[1024px]:w-[26rem] max-[1024px]:h-[36rem] max-[1440px]:w-[35.3rem] max-[1440px]:h-[46.5rem] w-[47.3rem] h-[58.5rem] rounded-[2.4rem] section"
     >
       <div class=" rounded-[2.4rem] absolute object-cover w-full h-full opacity-[70%]"></div>
       <img
